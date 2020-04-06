@@ -1,0 +1,69 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv40beta20.dtd" >
+   <PATCH nodename="E:\Documents and Settings\user\Desktop\Neuer Ordner\last_select_string_radiobutton\RadioButton (Value force IOBox) help.v4p">
+   <BOUNDS height="2490" left="5520" top="4350" type="Window" width="5655">
+   </BOUNDS>
+   <NODE componentmode="InABox" id="1" nodename="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="255" top="165" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="765" left="255" top="165" type="Box" width="3135">
+   </BOUNDS>
+   <BOUNDS height="160" left="9090" top="7215" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Show Slider" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Slider Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Show SliceIndex" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="4" values="0,0,0,1">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="4" values="0,0,0,1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="ID" pintype="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="0" nodename="RadioButton (Value force IOBox).v4p" path="E:\Documents and Settings\user\Desktop\Neuer Ordner\last_select_string_radiobutton\">
+   <BOUNDS height="100" left="2190" top="1455" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="6945" left="6900" top="10920" type="Window" width="13170">
+   </BOUNDS>
+   <BOUNDS left="2190" top="1455" type="Box">
+   </BOUNDS>
+   <PIN pinname="Input(Toggle)" visible="1">
+   </PIN>
+   <PIN pinname="ID" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="0" dstpinname="Input(Toggle)" srcnodeid="1" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="0" dstpinname="ID" srcnodeid="1" srcpinname="ID">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="5">
+   <BOUNDS type="Node" left="3480" top="165" width="3420" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3480" top="165" width="3420" height="480">
+   </BOUNDS>
+   <BOUNDS type="Window" left="0" top="0" width="215" height="160">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|IOBox (Value Advanced) &cr;&lf;has to be set to Toggle|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   </PATCH>
