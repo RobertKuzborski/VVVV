@@ -1,0 +1,193 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
+   <PATCH nodename="C:\Dropbox\0VVVV\ArtnetRuntime\ArtnetRuntime.v4p" systemname="ArtnetRuntime" filename="C:\Dropbox\0VVVV\ArtnetRuntime\ArtnetRuntime.v4p" scrollx="0" scrolly="-360">
+   <BOUNDS type="Window" left="11052" top="4752" width="9000" height="6000">
+   </BOUNDS>
+   <NODE systemname="ArtNet (Network Sender)" filename="%VVVV%\lib\packs\VL.CoreLib.VVVV.0.55.43-g436959e253\vvvv\nodes\modules\ArtNet (Network Sender).v4p" nodename="ArtNet (Network Sender)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="4008" top="3012" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Send" visible="1">
+   </PIN>
+   <PIN pinname="Remote Host" slicecount="1" values="255.255.255.255">
+   </PIN>
+   <PIN pinname="Input" slicecount="1" values="0" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="MainLoop (VVVV)" nodename="MainLoop (VVVV)" componentmode="Hidden" id="-6">
+   <BOUNDS type="Node" left="6048" top="1524" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Current Frame" visible="1">
+   </PIN>
+   <PIN pinname="Maximum Foreground FPS" slicecount="1" values="40">
+   </PIN>
+   <PIN pinname="Maximum Background FPS" slicecount="1" values="40">
+   </PIN>
+   </NODE>
+   <NODE systemname="Change (Animation)" nodename="Change (Animation)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="6036" top="1848" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="OnChange" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="OnChange" dstnodeid="0" dstpinname="Send">
+   </LINK>
+   <LINK srcnodeid="-6" srcpinname="Current Frame" dstnodeid="1" dstpinname="Input">
+   </LINK>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
+   <NODE systemname="LinearSpread (Spreads)" nodename="LinearSpread (Spreads)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="624" top="756" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Width" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Spread Count" slicecount="1" values="512">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="SetSlice (Spreads)" nodename="SetSlice (Spreads)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="1152" top="4500" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Spread" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   <PIN pinname="Bin Size" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="3" dstpinname="Spread">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Output" dstnodeid="0" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="4">
+   <BOUNDS type="Box" left="4092" top="828" width="300" height="1812">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4092" top="828" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="10" visible="1" values="0,0,0,0,0,0,0,0,0,0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="10">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Y Output Value" dstnodeid="3" dstpinname="Index">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="5">
+   <BOUNDS type="Box" left="4476" top="816" width="300" height="1812">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4476" top="816" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="10" visible="1" values="1,0,0,0,0,0,0,0,0,0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="10">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Y Output Value" dstnodeid="3" dstpinname="Bin Size">
+   </LINK>
+   <NODE systemname="Zip (Value Bin)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Zip (Value Bin)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="1164" top="2076" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1164" top="2076" width="2400" height="2400">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="10">
+   </PIN>
+   <PIN pinname="Input 1 Bin Size" visible="1">
+   </PIN>
+   <PIN pinname="Input 2 Bin Size" visible="1">
+   </PIN>
+   <PIN pinname="Input 3 Bin Size" visible="1">
+   </PIN>
+   <PIN pinname="Input 4 Bin Size" visible="1">
+   </PIN>
+   <PIN pinname="Input 5 Bin Size" visible="1">
+   </PIN>
+   <PIN pinname="Input 6 Bin Size" visible="1">
+   </PIN>
+   <PIN pinname="Input 7 Bin Size" visible="1">
+   </PIN>
+   <PIN pinname="Input 8 Bin Size" visible="1">
+   </PIN>
+   <PIN pinname="Input 9 Bin Size" visible="1">
+   </PIN>
+   <PIN pinname="Input 10 Bin Size" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Output" dstnodeid="3" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Unzip (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Unzip (Value)" componentmode="Hidden" id="7">
+   <BOUNDS type="Node" left="2160" top="948" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2160" top="948" width="2400" height="2400">
+   </BOUNDS>
+   <PIN pinname="Output Count" slicecount="1" values="10">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 2" visible="1">
+   </PIN>
+   <PIN pinname="Output 3" visible="1">
+   </PIN>
+   <PIN pinname="Output 4" visible="1">
+   </PIN>
+   <PIN pinname="Output 5" visible="1">
+   </PIN>
+   <PIN pinname="Output 6" visible="1">
+   </PIN>
+   <PIN pinname="Output 7" visible="1">
+   </PIN>
+   <PIN pinname="Output 8" visible="1">
+   </PIN>
+   <PIN pinname="Output 9" visible="1">
+   </PIN>
+   <PIN pinname="Output 10" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Y Output Value" dstnodeid="7" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Output 1" dstnodeid="6" dstpinname="Input 1 Bin Size">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Output 2" dstnodeid="6" dstpinname="Input 2 Bin Size">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Output 3" dstnodeid="6" dstpinname="Input 3 Bin Size">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Output 4" dstnodeid="6" dstpinname="Input 4 Bin Size">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Output 5" dstnodeid="6" dstpinname="Input 5 Bin Size">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Output 6" dstnodeid="6" dstpinname="Input 6 Bin Size">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Output 7" dstnodeid="6" dstpinname="Input 7 Bin Size">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Output 8" dstnodeid="6" dstpinname="Input 8 Bin Size">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Output 9" dstnodeid="6" dstpinname="Input 9 Bin Size">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Output 10" dstnodeid="6" dstpinname="Input 10 Bin Size">
+   </LINK>
+   </PATCH>
