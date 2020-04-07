@@ -1,0 +1,1083 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
+   <PATCH nodename="C:\Users\Robert\Electronics\vvvv_45beta34.2_x64\PioneerDJLinkDecode.v4p" systemname="PioneerDJLinkDecode" filename="C:\Users\Robert\Electronics\vvvv_45beta34.2_x64\PioneerDJLinkDecode.v4p" scrollx="2736" scrolly="9000">
+   <BOUNDS type="Window" left="1044" top="780" width="23112" height="9600">
+   </BOUNDS>
+   <NODE systemname="I (Spreads)" nodename="I (Spreads)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="732" top="2076" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname=".. To [" slicecount="1" values="64">
+   </PIN>
+   </NODE>
+   <NODE systemname="AsRaw (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="AsRaw (Value)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="732" top="2520" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Format" slicecount="1" values="Byte">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Output" dstnodeid="1" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="2" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="732" top="2940" width="2028" height="3276">
+   </BOUNDS>
+   <BOUNDS type="Node" left="732" top="2940" width="0" height="0">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="2" dstpinname="Input Node">
+   </LINK>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="3" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="660" top="180" width="1140" height="240">
+   </BOUNDS>
+   <BOUNDS type="Box" left="660" top="180" width="2184" height="1716">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|1 Mixer Startup Message&cr;&lf;UDP port 50000&cr;&lf;37 bytes,&cr;&lf;44 bytes,&cr;&lf;50 bytes,&cr;&lf;|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="5" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="3948" top="2892" width="2028" height="3276">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3948" top="2892" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="4" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="4020" top="204" width="1140" height="240">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4020" top="204" width="2184" height="1716">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|2 CDJ STARTUP&cr;&lf;UDP port 50000&cr;&lf;54 bytes long,&cr;&lf;&cr;&lf;|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="6" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="9084" top="408" width="1140" height="240">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9084" top="408" width="2148" height="1584">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|3 Tracking BPM and Beats&cr;&lf;port 50001.&cr;&lf;45 bytes&cr;&lf;96 bytes.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="I (Spreads)" nodename="I (Spreads)" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="3948" top="1980" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname=".. To [" slicecount="1" values="64">
+   </PIN>
+   </NODE>
+   <NODE systemname="AsRaw (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="AsRaw (Value)" componentmode="Hidden" id="7">
+   <BOUNDS type="Node" left="3948" top="2424" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Format" slicecount="1" values="Byte">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Output" dstnodeid="7" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Output" dstnodeid="5" dstpinname="Input Node">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="11" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="9048" top="3036" width="2028" height="3276">
+   </BOUNDS>
+   <BOUNDS type="Node" left="9048" top="3036" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="I (Spreads)" nodename="I (Spreads)" componentmode="Hidden" id="10">
+   <BOUNDS type="Node" left="9048" top="2124" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname=".. To [" slicecount="1" values="96">
+   </PIN>
+   </NODE>
+   <NODE systemname="AsRaw (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="AsRaw (Value)" componentmode="Hidden" id="9">
+   <BOUNDS type="Node" left="9048" top="2568" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Format" slicecount="1" values="Byte">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="10" srcpinname="Output" dstnodeid="9" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Take (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Take (Raw)" componentmode="Hidden" id="12">
+   <BOUNDS type="Node" left="4512" top="7452" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="11">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Header">
+   </PIN>
+   </NODE>
+   <NODE systemname="Skip (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Skip (Raw)" componentmode="Hidden" id="13">
+   <BOUNDS type="Node" left="11760" top="6612" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="11">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="11" srcpinname="Output Node" dstnodeid="12" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="14" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="3576" top="7836" width="2700" height="324">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3576" top="7836" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Output" dstnodeid="14" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output Node" dstnodeid="13" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Take (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Take (Raw)" componentmode="Hidden" id="15">
+   <BOUNDS type="Node" left="11760" top="6996" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="20">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="15" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="16" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="11784" top="7800" width="2004" height="912">
+   </BOUNDS>
+   <BOUNDS type="Node" left="11784" top="7800" width="0" height="0">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="15" srcpinname="Output" dstnodeid="16" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="Skip (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Skip (Raw)" componentmode="Hidden" id="19">
+   <BOUNDS type="Node" left="13968" top="6564" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="31">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Take (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Take (Raw)" componentmode="Hidden" id="18">
+   <BOUNDS type="Node" left="13968" top="6948" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="2">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="19" srcpinname="Output" dstnodeid="18" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="17" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="13992" top="7752" width="2004" height="912">
+   </BOUNDS>
+   <BOUNDS type="Node" left="13992" top="7752" width="0" height="0">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="18" srcpinname="Output" dstnodeid="17" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output Node" dstnodeid="19" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Skip (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Skip (Raw)" componentmode="Hidden" id="22">
+   <BOUNDS type="Node" left="16152" top="6552" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="33">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Take (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Take (Raw)" componentmode="Hidden" id="21">
+   <BOUNDS type="Node" left="16152" top="6936" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="22" srcpinname="Output" dstnodeid="21" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="20" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="16176" top="7740" width="2004" height="912">
+   </BOUNDS>
+   <BOUNDS type="Node" left="16176" top="7740" width="0" height="0">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="21" srcpinname="Output" dstnodeid="20" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output Node" dstnodeid="22" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Skip (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Skip (Raw)" componentmode="Hidden" id="25">
+   <BOUNDS type="Node" left="18336" top="6588" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="34">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Take (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Take (Raw)" componentmode="Hidden" id="24">
+   <BOUNDS type="Node" left="18336" top="6972" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="2">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="25" srcpinname="Output" dstnodeid="24" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="23" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="18360" top="7776" width="2004" height="912">
+   </BOUNDS>
+   <BOUNDS type="Node" left="18360" top="7776" width="0" height="0">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="24" srcpinname="Output" dstnodeid="23" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output Node" dstnodeid="25" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Skip (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Skip (Raw)" componentmode="Hidden" id="28">
+   <BOUNDS type="Node" left="9588" top="9156" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="36">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Take (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Take (Raw)" componentmode="Hidden" id="27">
+   <BOUNDS type="Node" left="9588" top="9540" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="28" srcpinname="Output" dstnodeid="27" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="26" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="9612" top="10344" width="2004" height="912">
+   </BOUNDS>
+   <BOUNDS type="Node" left="9612" top="10344" width="0" height="0">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="27" srcpinname="Output" dstnodeid="26" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output Node" dstnodeid="28" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Skip (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Skip (Raw)" componentmode="Hidden" id="34">
+   <BOUNDS type="Node" left="11736" top="9156" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="40">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Take (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Take (Raw)" componentmode="Hidden" id="33">
+   <BOUNDS type="Node" left="11736" top="9540" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="34" srcpinname="Output" dstnodeid="33" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="32" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="11760" top="10344" width="2004" height="912">
+   </BOUNDS>
+   <BOUNDS type="Node" left="11760" top="10344" width="0" height="0">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="33" srcpinname="Output" dstnodeid="32" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output Node" dstnodeid="34" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Skip (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Skip (Raw)" componentmode="Hidden" id="37">
+   <BOUNDS type="Node" left="13824" top="9132" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="44">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Take (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Take (Raw)" componentmode="Hidden" id="36">
+   <BOUNDS type="Node" left="13824" top="9516" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="37" srcpinname="Output" dstnodeid="36" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="35" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="13848" top="10320" width="2004" height="912">
+   </BOUNDS>
+   <BOUNDS type="Node" left="13848" top="10320" width="0" height="0">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="36" srcpinname="Output" dstnodeid="35" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="Skip (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Skip (Raw)" componentmode="Hidden" id="40">
+   <BOUNDS type="Node" left="15912" top="9108" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="48">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Take (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Take (Raw)" componentmode="Hidden" id="39">
+   <BOUNDS type="Node" left="15912" top="9492" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="40" srcpinname="Output" dstnodeid="39" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="38" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="15936" top="10296" width="2004" height="912">
+   </BOUNDS>
+   <BOUNDS type="Node" left="15936" top="10296" width="0" height="0">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="39" srcpinname="Output" dstnodeid="38" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="Skip (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Skip (Raw)" componentmode="Hidden" id="43">
+   <BOUNDS type="Node" left="18000" top="9084" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="52">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Take (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Take (Raw)" componentmode="Hidden" id="42">
+   <BOUNDS type="Node" left="18000" top="9468" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="43" srcpinname="Output" dstnodeid="42" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="41" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="18024" top="10272" width="2004" height="912">
+   </BOUNDS>
+   <BOUNDS type="Node" left="18024" top="10272" width="0" height="0">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="42" srcpinname="Output" dstnodeid="41" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="Skip (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Skip (Raw)" componentmode="Hidden" id="46">
+   <BOUNDS type="Node" left="20088" top="9060" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="56">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Take (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Take (Raw)" componentmode="Hidden" id="45">
+   <BOUNDS type="Node" left="20088" top="9444" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="46" srcpinname="Output" dstnodeid="45" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="44" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="20112" top="10248" width="2004" height="912">
+   </BOUNDS>
+   <BOUNDS type="Node" left="20112" top="10248" width="0" height="0">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="45" srcpinname="Output" dstnodeid="44" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output Node" dstnodeid="37" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output Node" dstnodeid="40" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output Node" dstnodeid="43" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output Node" dstnodeid="46" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Skip (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Skip (Raw)" componentmode="Hidden" id="49">
+   <BOUNDS type="Node" left="9456" top="11544" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="56">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Take (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Take (Raw)" componentmode="Hidden" id="48">
+   <BOUNDS type="Node" left="9456" top="11928" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="49" srcpinname="Output" dstnodeid="48" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="47" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="9480" top="12732" width="2004" height="912">
+   </BOUNDS>
+   <BOUNDS type="Node" left="9480" top="12732" width="0" height="0">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="48" srcpinname="Output" dstnodeid="47" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output Node" dstnodeid="49" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Skip (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Skip (Raw)" componentmode="Hidden" id="52">
+   <BOUNDS type="Node" left="11640" top="11556" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="56">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Take (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Take (Raw)" componentmode="Hidden" id="51">
+   <BOUNDS type="Node" left="11640" top="11940" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="52" srcpinname="Output" dstnodeid="51" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="50" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="11664" top="12744" width="2004" height="912">
+   </BOUNDS>
+   <BOUNDS type="Node" left="11664" top="12744" width="0" height="0">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="51" srcpinname="Output" dstnodeid="50" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="Skip (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Skip (Raw)" componentmode="Hidden" id="55">
+   <BOUNDS type="Node" left="13824" top="11568" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="56">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Take (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Take (Raw)" componentmode="Hidden" id="54">
+   <BOUNDS type="Node" left="13824" top="11952" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="55" srcpinname="Output" dstnodeid="54" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="53" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="13848" top="12756" width="2004" height="912">
+   </BOUNDS>
+   <BOUNDS type="Node" left="13848" top="12756" width="0" height="0">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="54" srcpinname="Output" dstnodeid="53" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="Skip (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Skip (Raw)" componentmode="Hidden" id="58">
+   <BOUNDS type="Node" left="16008" top="11580" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="60">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Take (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Take (Raw)" componentmode="Hidden" id="57">
+   <BOUNDS type="Node" left="16008" top="11964" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="24">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="58" srcpinname="Output" dstnodeid="57" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="56" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="16032" top="12768" width="2004" height="912">
+   </BOUNDS>
+   <BOUNDS type="Node" left="16032" top="12768" width="0" height="0">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="57" srcpinname="Output" dstnodeid="56" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="Skip (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Skip (Raw)" componentmode="Hidden" id="61">
+   <BOUNDS type="Node" left="18192" top="11592" width="444" height="276">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="84">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Take (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Take (Raw)" componentmode="Hidden" id="60">
+   <BOUNDS type="Node" left="18192" top="11976" width="504" height="276">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="61" srcpinname="Output" dstnodeid="60" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="59" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="18216" top="12780" width="2004" height="912">
+   </BOUNDS>
+   <BOUNDS type="Node" left="18216" top="12780" width="0" height="0">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="60" srcpinname="Output" dstnodeid="59" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="Skip (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Skip (Raw)" componentmode="Hidden" id="64">
+   <BOUNDS type="Node" left="20376" top="11604" width="444" height="276">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="88">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Take (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Take (Raw)" componentmode="Hidden" id="63">
+   <BOUNDS type="Node" left="20376" top="11988" width="504" height="276">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="2">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="64" srcpinname="Output" dstnodeid="63" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="62" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="20400" top="12792" width="2004" height="912">
+   </BOUNDS>
+   <BOUNDS type="Node" left="20400" top="12792" width="0" height="0">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="63" srcpinname="Output" dstnodeid="62" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output Node" dstnodeid="52" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output Node" dstnodeid="55" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output Node" dstnodeid="58" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output Node" dstnodeid="61" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output Node" dstnodeid="64" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Skip (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Skip (Raw)" componentmode="Hidden" id="67">
+   <BOUNDS type="Node" left="9480" top="13932" width="444" height="276">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="88">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Take (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Take (Raw)" componentmode="Hidden" id="66">
+   <BOUNDS type="Node" left="9480" top="14316" width="504" height="276">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="2">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="67" srcpinname="Output" dstnodeid="66" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="65" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="9504" top="15120" width="2004" height="912">
+   </BOUNDS>
+   <BOUNDS type="Node" left="9504" top="15120" width="0" height="0">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="66" srcpinname="Output" dstnodeid="65" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output Node" dstnodeid="67" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Skip (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Skip (Raw)" componentmode="Hidden" id="70">
+   <BOUNDS type="Node" left="11664" top="13920" width="444" height="276">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="90">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Take (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Take (Raw)" componentmode="Hidden" id="69">
+   <BOUNDS type="Node" left="11664" top="14304" width="504" height="276">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="2">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="70" srcpinname="Output" dstnodeid="69" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="68" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="11688" top="15108" width="2004" height="912">
+   </BOUNDS>
+   <BOUNDS type="Node" left="11688" top="15108" width="0" height="0">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="69" srcpinname="Output" dstnodeid="68" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="Skip (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Skip (Raw)" componentmode="Hidden" id="73">
+   <BOUNDS type="Node" left="13848" top="13908" width="444" height="276">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="92">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Take (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Take (Raw)" componentmode="Hidden" id="72">
+   <BOUNDS type="Node" left="13848" top="14292" width="504" height="276">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="73" srcpinname="Output" dstnodeid="72" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="71" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="13872" top="15096" width="2004" height="912">
+   </BOUNDS>
+   <BOUNDS type="Node" left="13872" top="15096" width="0" height="0">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="72" srcpinname="Output" dstnodeid="71" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="Skip (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Skip (Raw)" componentmode="Hidden" id="76">
+   <BOUNDS type="Node" left="15996" top="13908" width="444" height="276">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="93">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Take (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Take (Raw)" componentmode="Hidden" id="75">
+   <BOUNDS type="Node" left="15996" top="14292" width="504" height="276">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="2">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="76" srcpinname="Output" dstnodeid="75" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="74" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="16020" top="15096" width="2004" height="912">
+   </BOUNDS>
+   <BOUNDS type="Node" left="16020" top="15096" width="0" height="0">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="75" srcpinname="Output" dstnodeid="74" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output Node" dstnodeid="70" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output Node" dstnodeid="73" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output Node" dstnodeid="76" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Skip (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Skip (Raw)" componentmode="Hidden" id="79">
+   <BOUNDS type="Node" left="18252" top="13896" width="444" height="276">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="95">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Take (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Take (Raw)" componentmode="Hidden" id="78">
+   <BOUNDS type="Node" left="18252" top="14280" width="504" height="276">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="79" srcpinname="Output" dstnodeid="78" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="77" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="18276" top="15084" width="2004" height="912">
+   </BOUNDS>
+   <BOUNDS type="Node" left="18276" top="15084" width="0" height="0">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="78" srcpinname="Output" dstnodeid="77" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output Node" dstnodeid="79" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="81" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="6312" top="9276" width="528" height="420">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6312" top="9276" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" values="||" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="= (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="= (Raw)" componentmode="Hidden" id="82">
+   <BOUNDS type="Node" left="6648" top="9924" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="AsRaw (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="AsRaw (Value)" componentmode="Hidden" id="83">
+   <BOUNDS type="Node" left="7332" top="9564" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Format" slicecount="1" values="Byte">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" slicecount="1" visible="1" values="18.11">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="83" srcpinname="Output" dstnodeid="82" dstpinname="Input 2">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="84" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="7404" top="9948" width="516" height="252">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7404" top="9948" width="0" height="0">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="83" srcpinname="Output" dstnodeid="84" dstpinname="Input Node">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="85" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7332" top="8976" width="792" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7332" top="8976" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="40">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="85" srcpinname="Y Output Value" dstnodeid="83" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="86" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="6276" top="10584" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6276" top="10584" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="82" srcpinname="Output" dstnodeid="86" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="87" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="14340" top="468" width="7110" height="930">
+   </BOUNDS>
+   <BOUNDS type="Node" left="14340" top="468" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Input String" visible="1" slicecount="4" encoded="1" values="|UXNwdDFXbUpPTChDREotMjAwMG5leHVzAAAAAAAAAAEAAgA8AAACTgAABJwAAAJOAAAJOAAAC4YA&cr;&lf;ABJw////////////////////////////////ABAAAAAAJ7kEAAAC|,|UXNwdDFXbUpPTChDREotMjAwMG5leHVzAQI8Ak4EnAScCTgN1BJw////////////////////////&cr;&lf;////////ECe5AwI=|,|UXNwdDFXbUpPTChDREotMjAwMG5leHVzAQI8Ak4EnAbqCTgQIhJw////////////////////////&cr;&lf;////////ECe5AgI=|,|UXNwdDFXbUpPTChDREotMjAwMG5leHVzAAAAAAAAAAEAAgA8AAACTgAABJwAAAk4AAAJOAAAEnAA&cr;&lf;ABJw////////////////////////////////ABAAAAAAJ7kBAAAC|">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="88">
+   <BOUNDS type="Node" left="14472" top="1620" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="87" srcpinname="Output String" dstnodeid="88" dstpinname="Input">
+   </LINK>
+   <NODE systemname="AsRaw (String)" nodename="AsRaw (String)" componentmode="Hidden" id="89">
+   <BOUNDS type="Node" left="14628" top="2052" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="88" srcpinname="Output" dstnodeid="89" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="90" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="14748" top="3060" width="3024" height="1944">
+   </BOUNDS>
+   <BOUNDS type="Node" left="14748" top="3060" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="89" srcpinname="Output" dstnodeid="90" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="Split (String)" nodename="Split (String)" componentmode="Hidden" id="93">
+   <BOUNDS type="Node" left="18420" top="2700" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="AsValue (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="AsValue (Raw)" componentmode="Hidden" id="94">
+   <BOUNDS type="Node" left="12216" top="5208" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Format" slicecount="1" values="Byte">
+   </PIN>
+   <PIN pinname="Output Bin Size" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="95" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="12756" top="5568" width="792" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="12756" top="5568" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="94" srcpinname="Output Bin Size" dstnodeid="95" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="90" srcpinname="Output Node" dstnodeid="94" dstpinname="Input">
+   </LINK>
+   <NODE id="80" systemname="Skip (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Skip (Raw)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
+   <BOUNDS type="Node" left="6720" top="8052" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1" pintype="Output">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" pintype="Input" visible="1" values="10">
+   </PIN>
+   <PIN pinname="Input" visible="1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <BOUNDS type="Box" left="2184" top="84" width="2400" height="1800">
+   </BOUNDS>
+   <BOUNDS type="Window" left="0" top="0" width="6000" height="4500">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Window Handle" pintype="Output">
+   </PIN>
+   <PIN pinname="ID" pintype="Output" visible="-1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Take (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Take (Raw)" componentmode="Hidden" id="96">
+   <BOUNDS type="Node" left="6696" top="8460" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Count" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="80" srcpinname="Output" dstnodeid="96" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="96" srcpinname="Output" dstnodeid="81" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="96" srcpinname="Output" dstnodeid="82" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output Node" dstnodeid="80" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="99" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="4344" top="8388" width="1368" height="312">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4344" top="8388" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Input String" visible="1" slicecount="1" values="Qspt1WmJOL(">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="90" srcpinname="Output Node" dstnodeid="11" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="AsRaw (String)" nodename="AsRaw (String)" componentmode="Hidden" id="100">
+   <BOUNDS type="Node" left="4344" top="8820" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="99" srcpinname="Output String" dstnodeid="100" dstpinname="Input">
+   </LINK>
+   <NODE systemname="= (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="= (Raw)" componentmode="Hidden" id="97">
+   <BOUNDS type="Node" left="4092" top="9348" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Output" dstnodeid="97" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="100" srcpinname="Output" dstnodeid="97" dstpinname="Input 2">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="101" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="4008" top="9984" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4008" top="9984" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|IS CDJ Header|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="97" srcpinname="Output" dstnodeid="101" dstpinname="Y Input Value">
+   </LINK>
+   </PATCH>
